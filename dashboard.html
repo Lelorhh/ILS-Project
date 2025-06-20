@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  meta charset="UTF-8" />
+  <title>TerraBook-Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2> Welcome, <span id="username"></span!></h2>
+      <h3>Your Bookings</h3>
+      <ul id="bookingList"></ul>ul>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <script>
+      const user=localStorage.getItem("loggedUser");
+      const bookingList = document.getElementById("bookingList");
+      const usernameSpan = document.getElementById("username"):
+
+      if (!user) {
+        window.location.href ="login.html";
+      } else {
+        usernameSpan.textContent = user;
+      }
+
+      const mockBookings= [
+        {
+          location: "Cape Town, SA",
+          checkIn: "2025-08-10",
+          checOut: "2025-08-15",
+          property: "Ocean View Apartment"
+        },
+        {
+          location: "Durban,SA",
+          checkIn: "2025-07-01",
+          checkOut: "2025-08-15",
+          property: "Beachfront BnB"
+        }
+      ];
+      mockingBookings.forEach(b => {
+        const li = document.createElement("loggedInUser"):
+        window.location.href = "login.html":
+      }
+    </script>
+  </body>
+  </html>
